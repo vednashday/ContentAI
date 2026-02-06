@@ -15,7 +15,7 @@ export default function Dashboard({ user }) {
   const [imagePreview, setImagePreview] = useState(null);
   const [copiedId, setCopiedId] = useState(null);
 
-  const API = "http://localhost:5000/api";
+  const API = import.meta.env.VITE_BACKEND_URL;
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
